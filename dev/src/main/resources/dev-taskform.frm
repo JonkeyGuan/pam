@@ -1,0 +1,1 @@
+{"id":"5a1cc7ec-9b9e-4e62-a33d-a5a683399bf3","name":"dev-taskform.frm","model":{"processName":"dev","processId":"dev","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.process.BusinessProcessFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

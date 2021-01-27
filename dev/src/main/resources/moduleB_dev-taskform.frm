@@ -1,0 +1,1 @@
+{"id":"728629b0-bdd4-4bc8-a2f8-3edb9ca99988","name":"moduleB_dev-taskform.frm","model":{"taskName":"moduleB_dev","processId":"dev","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

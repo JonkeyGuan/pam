@@ -1,0 +1,35 @@
+package com.demo.fibonacci;
+
+import com.demo.fibonacci.Fib
+
+dialect "mvel"
+
+rule "Recurse"
+	salience 10
+    when
+        f : Fib ( value == -1)
+        not ( Fib ( sequence == 1) )
+    then
+        insert ( new Fib (sequence = f.sequence-1) );
+        System.out.println("Recurse for : " + f.sequence);
+end
+
+rule "BootStrap"
+
+	when
+		f : Fib (sequence == 1 || == 2, value == -1)
+	then
+		modify ( f ){ value = 1 };
+		System.out.println("BootStrap for : " + f.sequence);
+
+end
+
+rule "Calculate"
+	when
+		f1 : Fib ( value != -1 )
+		f2 : Fib (sequence == f1.sequence + 1, value != -1)
+		f3 : Fib (sequence == f2.sequence + 1, value == -1)
+	then
+		modify ( f3 ) { value = f1.value + f2.value };
+		System.out.println( f3.sequence + " == " + f3.value);
+end
